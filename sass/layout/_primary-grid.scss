@@ -1,0 +1,9 @@
+@use "../abstarct/" as *;
+
+.primary--grid {
+  --gap: 2.5rem;
+
+  @include mq(medium) {
+    --gap: 4rem;
+  }
+}

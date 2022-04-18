@@ -1,0 +1,22 @@
+.d-flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.d-inline-flex {
+  display: inline-flex;
+  gap: var(--gap, 1rem);
+}
+
+.d-grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
+}

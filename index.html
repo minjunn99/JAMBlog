@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog website</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./asset/css/styles.css" />
+  </head>
+  <body>
+    <!-- Start header -->
+    <header class="header">
+      <div class="header--wrapper wrapper">
+        <nav class="header--nav d-flex">
+          <a href="./index.html" class="header--logo">Blog</a>
+
+          <ul class="menu d-flex" role="list">
+            <li class="menu--item">
+              <a href="./index.html" class="menu--link text-capitalize">home</a>
+            </li>
+            <li class="menu--item">
+              <a href="./pages/blog.html" class="menu--link text-capitalize">
+                blog
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End of header -->
+
+    <!-- Start main -->
+    <main>
+      <!-- Start hero section -->
+      <section class="hero">
+        <div class="hero--wrapper wrapper d-flex">
+          <div class="hero--content flow">
+            <h2 class="text-primary-400">Welcome to my blog!</h2>
+            <p>
+              I use this space to document my adventures in front-end
+              development, sharing how I’ve overcome issues I’ve run into,
+              useful resources, and more.
+            </p>
+            <p>
+              Below are some of my favourite articles, or you can go to the blog
+              page to see my most recent posts.
+            </p>
+            <div class="hero--btns d-flex">
+              <a
+                class="btn btn--primary"
+                href="#featured"
+                data-type="contained"
+              >
+                Featured articles
+              </a>
+              <a
+                class="btn btn--primary"
+                href="./pages/blog.html"
+                data-type="outlined"
+              >
+                Most recent articles
+              </a>
+            </div>
+          </div>
+          <div class="hero--img">
+            <img
+              src="./asset/images/hero-img.jpg"
+              alt="Hero image for hero section"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- End of hero section -->
+
+      <!-- Start featured section -->
+      <section class="featured" id="featured">
+        <div class="featured--wrapper wrapper flow">
+          <div class="featured--title flow text-center">
+            <h2 class="text-primary-400">Featured articles</h2>
+            <p>
+              Here is a sample of articles which I feel give you a good idea of
+              what this site is all about.
+            </p>
+          </div>
+          <div class="primary--grid d-grid">
+            <div class="post">
+              <div class="post--img">
+                <img src="./asset/images/blog-image.jpg" alt="image for post" />
+              </div>
+              <div class="post--content flow">
+                <div class="post--title flow">
+                  <h3 class="text-neutral-900">
+                    Blog Post Title Goes Here Lorem Ipsum dolor sit amet,
+                    consectetur adipiscing
+                  </h3>
+                  <p class="post--info fs-400 text-neutral-900">
+                    by
+                    <span class="text-capitalize text-neutral-400">
+                      John Smith
+                    </span>
+                    on
+                    <span class="text-neutral-400">January 24, 2020</span>
+                  </p>
+                </div>
+                <p class="post--desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  placerat, ipsum ac auctor ornare, nunc ligula scelerisque
+                  eros. Lorem ipsum dolor sit amet.
+                </p>
+                <button
+                  class="post--btn btn btn--primary text-capitalize"
+                  data-type="contained"
+                >
+                  Continue Reading
+                </button>
+              </div>
+            </div>
+            <div class="post">
+              <div class="post--img">
+                <img src="./asset/images/blog-image.jpg" alt="image for post" />
+              </div>
+              <div class="post--content flow">
+                <div class="post--title flow">
+                  <h3 class="text-neutral-900">
+                    Blog Post Title Goes Here Lorem Ipsum dolor sit amet,
+                    consectetur adipiscing
+                  </h3>
+                  <p class="post--info fs-400 text-neutral-900">
+                    by
+                    <span class="text-capitalize text-neutral-400">
+                      John Smith
+                    </span>
+                    on
+                    <span class="text-neutral-400">January 24, 2020</span>
+                  </p>
+                </div>
+                <p class="post--desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  placerat, ipsum ac auctor ornare, nunc ligula scelerisque
+                  eros. Lorem ipsum dolor sit amet.
+                </p>
+                <button
+                  class="post--btn btn btn--primary text-capitalize"
+                  data-type="contained"
+                >
+                  Continue Reading
+                </button>
+              </div>
+            </div>
+            <div class="post">
+              <div class="post--img">
+                <img src="./asset/images/blog-image.jpg" alt="image for post" />
+              </div>
+              <div class="post--content flow">
+                <div class="post--title flow">
+                  <h3 class="text-neutral-900">
+                    Blog Post Title Goes Here Lorem Ipsum dolor sit amet,
+                    consectetur adipiscing
+                  </h3>
+                  <p class="post--info fs-400 text-neutral-900">
+                    by
+                    <span class="text-capitalize text-neutral-400">
+                      John Smith
+                    </span>
+                    on
+                    <span class="text-neutral-400">January 24, 2020</span>
+                  </p>
+                </div>
+                <p class="post--desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  placerat, ipsum ac auctor ornare, nunc ligula scelerisque
+                  eros. Lorem ipsum dolor sit amet.
+                </p>
+                <button
+                  class="post--btn btn btn--primary text-capitalize"
+                  data-type="contained"
+                >
+                  Continue Reading
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of featured section -->
+    </main>
+    <!-- End of main -->
+
+    <!-- Start footer -->
+    <footer class="footer bg-primary-900">
+      <div class="footer-wrapper wrapper">
+        <p class="text-white text-center">
+          © 2020 Company Name. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- End of footer -->
+
+    <!-- Custom js -->
+    <script src="./asset/js/app.js"></script>
+  </body>
+</html>

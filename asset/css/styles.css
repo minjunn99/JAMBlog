@@ -1,0 +1,494 @@
+:root {
+  --ff-sans: "Roboto", sans-serif;
+  --ff-serif: "Playfair Display", serif;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-neutral-400: #999999;
+  --clr-neutral-600: #666666;
+  --clr-neutral-800: #333333;
+  --clr-neutral-900: #111111;
+  --clr-primary-50: #f7fcfb;
+  --clr-primary-400: #02826b;
+  --clr-primary-900: #005344;
+  --fs-400: 0.9375rem;
+  --fs-500: 1.0625rem;
+  --fs-600: 1.3125rem;
+  --fs-700: 2rem;
+  --fs-800: 2.625rem;
+  --fw-400: 400;
+  --fw-700: 700;
+  --br-1: 0.1875rem;
+  --br-2: 0.25rem;
+  --br-3: 0.3125rem;
+  --section-padding: 2.5rem;
+}
+@media only screen and (min-width: 64em) {
+  :root {
+    --fs-400: 1rem;
+    --fs-500: 1.125rem;
+    --fs-600: 1.5rem;
+    --fs-700: 2.25rem;
+    --fs-800: 3rem;
+    --section-padding: 10rem;
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-400);
+  color: var(--clr-neutral-800);
+  line-height: 150%;
+}
+
+section {
+  padding-block: var(--section-padding);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+::selection {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-white);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-serif);
+  font-weight: var(--font-weight, 700);
+  line-height: var(--line-height, 125%);
+}
+
+h1 {
+  font-size: var(--fs-800);
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: var(--fs-700);
+}
+
+h3 {
+  --line-height: 150%;
+  font-size: var(--fs-600);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-spacer, 1rem);
+}
+
+.wrapper {
+  width: min(100% - 1.5rem, 69.375rem);
+  margin-inline: auto;
+}
+
+.d-flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.d-inline-flex {
+  display: inline-flex;
+  gap: var(--gap, 1rem);
+}
+
+.d-grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.text-neutral-400 {
+  color: var(--clr-neutral-400) !important;
+}
+
+.bg-neutral-400 {
+  background-color: var(--clr-neutral-400) !important;
+}
+
+.text-neutral-600 {
+  color: var(--clr-neutral-600) !important;
+}
+
+.bg-neutral-600 {
+  background-color: var(--clr-neutral-600) !important;
+}
+
+.text-neutral-800 {
+  color: var(--clr-neutral-800) !important;
+}
+
+.bg-neutral-800 {
+  background-color: var(--clr-neutral-800) !important;
+}
+
+.text-neutral-900 {
+  color: var(--clr-neutral-900) !important;
+}
+
+.bg-neutral-900 {
+  background-color: var(--clr-neutral-900) !important;
+}
+
+.text-primary-50 {
+  color: var(--clr-primary-50) !important;
+}
+
+.bg-primary-50 {
+  background-color: var(--clr-primary-50) !important;
+}
+
+.text-primary-400 {
+  color: var(--clr-primary-400) !important;
+}
+
+.bg-primary-400 {
+  background-color: var(--clr-primary-400) !important;
+}
+
+.text-primary-900 {
+  color: var(--clr-primary-900) !important;
+}
+
+.bg-primary-900 {
+  background-color: var(--clr-primary-900) !important;
+}
+
+.text-white {
+  color: var(--clr-white) !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.btn {
+  padding: 0.9375rem 1.5rem;
+  font-weight: var(--fw-700);
+  color: var(--clr-neutral-900);
+  border-radius: var(--br-2);
+  transition: color 350ms ease, background-color 350ms ease;
+}
+.btn--primary[data-type=contained] {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-white);
+}
+.btn--primary[data-type=contained]:hover {
+  background-color: var(--clr-primary-900);
+}
+.btn--primary[data-type=outlined] {
+  background-color: transparent;
+  color: var(--clr-primary-400);
+  border: thin solid var(--clr-primary-400);
+}
+.btn--primary[data-type=outlined]:hover {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-white);
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media only screen and (min-width: 40em) {
+  .post {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+.post--content {
+  --flow-spacer: 1.25rem;
+}
+@media only screen and (min-width: 64em) {
+  .post--content {
+    --flow-spacer: 1.5rem;
+    max-width: 33.75rem;
+  }
+}
+.post--title {
+  --flow-spacer: 0.75rem;
+}
+.post--img {
+  width: 100%;
+  aspect-ratio: 7/5;
+}
+@media only screen and (min-width: 64em) {
+  .post--img {
+    max-width: 27.8125rem;
+  }
+}
+.post--img img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--br-3);
+}
+
+.article {
+  --flow-spacer: 2rem;
+  width: min(100% - 1.5rem, 46rem);
+  margin-inline: auto;
+  padding-block: 1.5rem;
+}
+@media only screen and (min-width: 64em) {
+  .article {
+    padding-block: 4rem;
+  }
+}
+.article--img {
+  width: 100%;
+  aspect-ratio: 13/5;
+}
+.article--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--br-3);
+  margin-bottom: 0.78125rem;
+}
+
+.primary--grid {
+  --gap: 2.5rem;
+}
+@media only screen and (min-width: 64em) {
+  .primary--grid {
+    --gap: 4rem;
+  }
+}
+
+.header--nav {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+}
+@media only screen and (min-width: 64em) {
+  .header--nav {
+    padding-block: 1.875rem;
+  }
+}
+.header--nav .menu--link {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-700);
+}
+@media only screen and (min-width: 64em) {
+  .header--nav .menu {
+    --gap: 2rem;
+  }
+}
+.header--logo {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-700);
+  color: var(--clr-primary-400);
+}
+
+.footer {
+  padding-block: 2rem;
+}
+
+.hero--wrapper {
+  --gap: 2.5rem;
+  flex-direction: column;
+}
+@media only screen and (min-width: 64em) {
+  .hero--wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.hero--content {
+  --flow-spacer: 1.5rem;
+  text-align: center;
+}
+@media only screen and (min-width: 64em) {
+  .hero--content {
+    --flow-spacer: 2.5rem;
+    text-align: left;
+    max-width: 31.875rem;
+  }
+}
+.hero--btns {
+  --gap: 0.625rem;
+  flex-direction: column;
+}
+@media only screen and (min-width: 40em) {
+  .hero--btns {
+    --gap: 1.5rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .hero--btns {
+    justify-content: start;
+  }
+}
+.hero--img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+@media only screen and (min-width: 64em) {
+  .hero--img {
+    max-width: 31.875rem;
+    flex-shrink: 0;
+  }
+}
+.hero--img img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--br-3);
+}
+
+.featured--wrapper {
+  --flow-spacer: 2.5rem;
+}
+@media only screen and (min-width: 64em) {
+  .featured--wrapper {
+    --flow-spacer: 5.625rem;
+  }
+}
+.featured--title {
+  --flow-spacer: 1.5rem;
+}
+@media only screen and (min-width: 64em) {
+  .featured--title {
+    --flow-spacer: 2.5rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,29 @@
+.btn {
+  padding: 0.9375rem 1.5rem;
+  font-weight: var(--fw-700);
+  color: var(--clr-neutral-900);
+  border-radius: var(--br-2);
+  transition: color 350ms ease, background-color 350ms ease;
+
+  &--primary {
+    &[data-type="contained"] {
+      background-color: var(--clr-primary-400);
+      color: var(--clr-white);
+
+      &:hover {
+        background-color: var(--clr-primary-900);
+      }
+    }
+
+    &[data-type="outlined"] {
+      background-color: transparent;
+      color: var(--clr-primary-400);
+      border: thin solid var(--clr-primary-400);
+
+      &:hover {
+        background-color: var(--clr-primary-400);
+        color: var(--clr-white);
+      }
+    }
+  }
+}

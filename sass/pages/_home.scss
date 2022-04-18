@@ -1,0 +1,74 @@
+@use "../abstarct/" as *;
+
+.hero {
+  &--wrapper {
+    --gap: 2.5rem;
+    flex-direction: column;
+
+    @include mq(medium) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &--content {
+    --flow-spacer: 1.5rem;
+    text-align: center;
+
+    @include mq(medium) {
+      --flow-spacer: 2.5rem;
+      text-align: left;
+      max-width: 31.875rem;
+    }
+  }
+
+  &--btns {
+    --gap: 0.625rem;
+    flex-direction: column;
+
+    @include mq(small) {
+      --gap: 1.5rem;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @include mq(medium) {
+      justify-content: start;
+    }
+  }
+
+  &--img {
+    width: 100%;
+    aspect-ratio: 1;
+
+    @include mq(medium) {
+      max-width: 31.875rem;
+      flex-shrink: 0;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--br-3);
+    }
+  }
+}
+
+.featured {
+  &--wrapper {
+    --flow-spacer: 2.5rem;
+
+    @include mq(medium) {
+      --flow-spacer: 5.625rem;
+    }
+  }
+
+  &--title {
+    --flow-spacer: 1.5rem;
+
+    @include mq(medium) {
+      --flow-spacer: 2.5rem;
+    }
+  }
+}

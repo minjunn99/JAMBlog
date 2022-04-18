@@ -1,0 +1,31 @@
+@use "../abstarct/" as *;
+
+.header {
+  &--nav {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+
+    @include mq(medium) {
+      padding-block: 1.875rem;
+    }
+
+    .menu {
+      &--link {
+        font-size: var(--fs-400);
+        font-weight: var(--fw-700);
+      }
+
+      @include mq(medium) {
+        --gap: 2rem;
+      }
+    }
+  }
+
+  &--logo {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-700);
+    color: var(--clr-primary-400);
+  }
+}

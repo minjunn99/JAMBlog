@@ -1,0 +1,40 @@
+@use "../abstarct" as *;
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @include mq(small) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  &--content {
+    --flow-spacer: 1.25rem;
+
+    @include mq(medium) {
+      --flow-spacer: 1.5rem;
+      max-width: 33.75rem;
+    }
+  }
+
+  &--title {
+    --flow-spacer: 0.75rem;
+  }
+
+  &--img {
+    width: 100%;
+    aspect-ratio: 7/5;
+
+    @include mq(medium) {
+      max-width: 27.8125rem;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--br-3);
+    }
+  }
+}
