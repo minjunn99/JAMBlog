@@ -5,6 +5,17 @@
   border-radius: var(--br-2);
   transition: color 350ms ease, background-color 350ms ease;
 
+  &[data-type="outlined"] {
+    background-color: transparent;
+    color: var(--clr-neutral-800);
+    border: thin solid var(--clr-neutral-800);
+
+    &:hover {
+      background-color: var(--clr-neutral-800);
+      color: var(--clr-white);
+    }
+  }
+
   &--primary {
     &[data-type="contained"] {
       background-color: var(--clr-primary-400);

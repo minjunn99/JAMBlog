@@ -1,5 +1,9 @@
 html {
   font-size: 100%;
+  /* Style Scrollbar For Firefox */
+  overflow-y: scroll;
+  scrollbar-color: var(--clr-primary-400) transparent;
+  scrollbar-width: thin;
 }
 
 *,
@@ -47,4 +51,19 @@ button {
 ::selection {
   background-color: var(--clr-primary-400);
   color: var(--clr-white);
+}
+
+/* For Chrome and other browsers except Firefox */
+body::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--clr-primary-400);
+  border-radius: 10px;
+}
+
+::-moz-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }

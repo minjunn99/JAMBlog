@@ -1,0 +1,21 @@
+@use "../abstarct/" as *;
+
+.page {
+  justify-content: center;
+  align-items: center;
+
+  @include mq(small) {
+    justify-content: space-between;
+  }
+
+  &--number {
+    --gap: 0.5rem;
+  }
+
+  button {
+    display: none;
+    @include mq(small) {
+      display: block;
+    }
+  }
+}

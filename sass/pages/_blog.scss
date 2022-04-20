@@ -1,0 +1,11 @@
+@use "../abstarct/" as *;
+
+.recent {
+  &--wrapper {
+    --flow-spacer: 3rem;
+
+    @include mq(medium) {
+      --flow-spacer: 6rem;
+    }
+  }
+}

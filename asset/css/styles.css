@@ -109,6 +109,10 @@ select {
 }
 html {
   font-size: 100%;
+  /* Style Scrollbar For Firefox */
+  overflow-y: scroll;
+  scrollbar-color: var(--clr-primary-400) transparent;
+  scrollbar-width: thin;
 }
 
 *,
@@ -156,6 +160,22 @@ button {
 ::selection {
   background-color: var(--clr-primary-400);
   color: var(--clr-white);
+}
+
+/* For Chrome and other browsers except Firefox */
+body::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--clr-primary-400);
+  border-radius: 10px;
+}
+
+::-moz-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 
 h1,
@@ -303,6 +323,15 @@ h3 {
   border-radius: var(--br-2);
   transition: color 350ms ease, background-color 350ms ease;
 }
+.btn[data-type=outlined] {
+  background-color: transparent;
+  color: var(--clr-neutral-800);
+  border: thin solid var(--clr-neutral-800);
+}
+.btn[data-type=outlined]:hover {
+  background-color: var(--clr-neutral-800);
+  color: var(--clr-white);
+}
 .btn--primary[data-type=contained] {
   background-color: var(--clr-primary-400);
   color: var(--clr-white);
@@ -381,6 +410,27 @@ h3 {
   margin-bottom: 0.78125rem;
 }
 
+.page {
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 40em) {
+  .page {
+    justify-content: space-between;
+  }
+}
+.page--number {
+  --gap: 0.5rem;
+}
+.page button {
+  display: none;
+}
+@media only screen and (min-width: 40em) {
+  .page button {
+    display: block;
+  }
+}
+
 .primary--grid {
   --gap: 2.5rem;
 }
@@ -404,6 +454,9 @@ h3 {
 .header--nav .menu--link {
   font-size: var(--fs-400);
   font-weight: var(--fw-700);
+}
+.header--nav .menu--link:hover {
+  color: var(--clr-primary-400);
 }
 @media only screen and (min-width: 64em) {
   .header--nav .menu {
@@ -488,6 +541,15 @@ h3 {
 @media only screen and (min-width: 64em) {
   .featured--title {
     --flow-spacer: 2.5rem;
+  }
+}
+
+.recent--wrapper {
+  --flow-spacer: 3rem;
+}
+@media only screen and (min-width: 64em) {
+  .recent--wrapper {
+    --flow-spacer: 6rem;
   }
 }
 
